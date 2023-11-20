@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mine Craft 2D</title>
+    <link rel="stylesheet" href="styling/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet" />
+  </head>
+  <body>
+    <section id="start-Screen">
+      <ul>
+        <li>You need to pick a tool</li>
+        <li>Use the tool to take off a tile from the screen</li>
+        <li>You can place the tile back wherever you want</li>
+      </ul>
+      <div id="hero"></div>
+      <button id="start-button"></button>
+    </section>
+    <main id="grid-container">
+      <section id="inventory-container">
+        <div class="stock" id="gold-stock"><span id="gold-span">0</span></div>
+        <div class="stock" id="soil-stock"><span id="soil-span">0</span></div>
+        <div class="stock" id="diamond-stock">
+          <span id="diamond-span">0</span>
+        </div>
+        <div class="stock" id="cloud-stock"><span id="cloud-span">0</span></div>
+        <div class="stock" id="stone-stock"><span id="stone-span">0</span></div>
+        <div class="stock" id="leaves-stock">
+          <span id="leaves-span">0</span>
+        </div>
+        <div class="stock" id="wood-stock"><span id="wood-span">0</span></div>
+        <div class="stock" id="strongWood-stock">
+          <span id="strongWood-span">0</span>
+        </div>
+        <div class="stock" id="flowers-stock">
+          <span id="flowers-span">0</span>
+        </div>
+        <div class="stock" id="grass-stock"><span id="grass-span">0</span></div>
+        <div class="stock" id="strongLeaves-stock">
+          <span id="strongLeaves-span">0</span>
+        </div>
+      </section>
+      <section id="tools-container">
+        <button id="iron-shovel-button" class="boxtool">
+          <i class="iron-shovel"></i>
+        </button>
+        <button id="iron-axe-button" class="boxtool">
+          <i class="iron-axe"></i>
+        </button>
+        <button id="diamond-pickaxe-button" class="boxtool">
+          <i class="diamond-pickaxe"></i>
+        </button>
+        <button id="vacuum-button" class="boxtool">
+          <i class="vacuum"></i>
+        </button>
+        <div id="inventory-box"></div>
+      </section>
+    </main>
+    <audio id="vacuumSound" src="sounds/vaccumsound.mp3"></audio>
+    <audio id="axeSound" src="sounds/axe-hit.mp3"></audio>
+    <audio id="coinsSound" src="sounds/coinsfalling.mp3"></audio>
+    <audio id="rockSound" src="sounds/rockBreaking.mp3"></audio>
+    <audio id="shovelSound" src="sounds/shovel.mp3"></audio>
+    <script src="javascript/minecraft.js"></script>
+  </body>
+</html>

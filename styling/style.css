@@ -1,0 +1,386 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: rgb(2, 18, 2);
+  flex-direction: column;
+  cursor: url("/img/shovelCursorIcon.png"), auto;
+  position: relative;
+}
+#start-Screen {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background: url("/img/minecraft-background.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#start-Screen > ul {
+  display: inline-block;
+  font-family: "Minecraft", sans-serif;
+  font-size: 6vmin;
+  color: rgb(223, 60, 198);
+}
+
+#hero {
+  display: inline-block;
+  height: 50vmin;
+  width: 120vmin;
+
+  background-image: url("/img/Minecraft-Logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#start-button {
+  width: 29vmin;
+  height: 9vmin;
+  font-family: "Minecraft", sans-serif;
+  font-size: 4vmin;
+  background-color: goldenrod;
+
+  animation: colorChange 2s infinite alternate;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes colorChange {
+  from {
+    color: rgb(1, 72, 2); /* Start color */
+  }
+  to {
+    color: rgb(135, 48, 1); /* End color */
+  }
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+}
+
+#grid-container {
+  position: relative;
+  background-color: rgb(0, 149, 255);
+  width: 150vmin;
+  height: 100vmin;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+}
+
+#tools-container {
+  position: absolute;
+  margin-bottom: 70vmin;
+  width: 15vmin;
+  height: 60vmin;
+  top: 5vmin;
+  left: -20vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: brown;
+  border-radius: 10px;
+}
+#reset-button {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("/img/newGameIcon.gif");
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2.5vmin;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14vmin;
+  height: 14vmin;
+  background-color: rgb(255, 237, 215);
+  border-radius: 10px;
+}
+#inventory-box {
+  position: absolute;
+  width: 10vmin;
+  height: 10vmin;
+  margin-top: 80vmin;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("/img/chest-minecraft.gif");
+}
+
+#inventory-container {
+  position: absolute;
+  width: 60vmin;
+  height: 11vmin;
+  border: 0.2vmin solid rgb(64, 16, 16);
+  top: 70vmin;
+  background-color: brown;
+  opacity: 0.9;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#inventory-container.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.stock {
+  width: 4vmin;
+  height: 4vmin;
+  border: 1px solid;
+  margin: auto;
+  position: relative;
+}
+
+#soil-stock {
+  background: url("/img/soil.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#gold-stock {
+  background: url("/img/goldtexture.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#diamond-stock {
+  background: url("/img/diamondTexture.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#cloud-stock {
+  background: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#stone-stock {
+  background: url("/img/stone.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#leaves-stock {
+  background: url("/img/leaves.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#wood-stock {
+  background: url("/img/wood.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#strongWood-stock {
+  background: url("/img/strongWood.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#flowers-stock {
+  background: url("/img/flowers.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#grass-stock {
+  background: url("/img/grass.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#strongLeaves-stock {
+  background: url("/img/StrongLeaves.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.stock > span {
+  position: absolute;
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: white;
+  font-size: 1.56vmin;
+  text-align: center;
+  width: 1.5vmin;
+  height: 1.5vmin;
+}
+
+.boxtool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14vmin;
+  height: 14vmin;
+  background-color: rgb(255, 237, 215);
+  border-radius: 10px;
+}
+.iron-shovel {
+  width: 10vmin;
+  height: 10vmin;
+  background: url("/img/woodenShovelTexture.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.iron-axe {
+  width: 10vmin;
+  height: 10vmin;
+  background: url("/img/woodenAxeTexture.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.diamond-pickaxe {
+  width: 10vmin;
+  height: 10vmin;
+  background: url("/img/woodenPickaxeTexture.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.vacuum {
+  width: 10vmin;
+  height: 10vmin;
+  background: url("/img/vacuu.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: auto;
+}
+
+.cell {
+  width: 5vmin;
+  height: 5vmin;
+}
+
+.cell.wood {
+  width: 5vmin;
+  height: 5vmin;
+  background: url("/img/wood.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.cell.strongWood {
+  width: 5vmin;
+  height: 5vmin;
+  background: url("/img/strongWood.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.cell.strongLeaves {
+  width: 5vmin;
+  height: 5vmin;
+  background: url("/img/strongLeaves.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.cell.stone {
+  width: 5vmin;
+  height: 5vmin;
+  background: url("/img/stone.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.cell.stone {
+  width: 5vmin;
+  height: 5vmin;
+  background: url("/img/stone.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.cell.soil {
+  background: url("/img/soil.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.cell.leaves {
+  width: 5vmin;
+  height: 5vmin;
+  background: url("/img/leaves.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.cell.flowers {
+  width: 5vmin;
+  height: 5vmin;
+  background: url("/img/flowers.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.cell.grass {
+  width: 5vmin;
+  height: 5vmin;
+  background: url("/img/grass.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.cell.gold {
+  width: 5vmin;
+  height: 5vmin;
+  background: url("/img/goldTexture.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.cell.diamond {
+  width: 5vmin;
+  height: 5vmin;
+  background: url("/img/diamondTexture.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.cell.cloud {
+  width: 5vmin;
+  height: 5vmin;
+  background: white;
+}
