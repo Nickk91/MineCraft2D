@@ -49,21 +49,11 @@ body {
   font-family: "Minecraft", sans-serif;
   font-size: 4vmin;
   background-color: goldenrod;
-
-  animation: colorChange 2s infinite alternate;
+  color: rgb(50, 39, 9);
 
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@keyframes colorChange {
-  from {
-    color: rgb(1, 72, 2); /* Start color */
-  }
-  to {
-    color: rgb(135, 48, 1); /* End color */
-  }
 }
 
 .cursor {
